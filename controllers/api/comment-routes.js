@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
       comment.get({ plain: true })
     );
 
-    res.render("single-post", { comments, loggedIn: req.session.loggedIn });
+    res.render("single-post", { comments, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
