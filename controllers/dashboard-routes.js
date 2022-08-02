@@ -17,7 +17,7 @@ router.get("/", withAuth, async (req, res) => {
     // Pass serialized data and session flag into template
     res.render("dashboard", {
       posts,
-      logged_in: true,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.redirect("login");
@@ -29,10 +29,10 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         const editPost = await Post.findByPk(req.params.id);
         const editData = editPost.map((post) => post.get({plain: true}));
         console.log(editData)
-        res.render('edit-post', {
+        res.render("edit-post", {
           editData,
-          logged_in: true
-        })
+          logged_in: req.session.logged_in,
+        });
     }catch(err){
         res.status(500).json(err)
     }
