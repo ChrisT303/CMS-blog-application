@@ -1,0 +1,8 @@
+nav {
+    height: 100px;
+    background-color: gray;
+}
+
+.card-body {
+    background-color: rgb(139, 139, 177);
+}

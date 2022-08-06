@@ -36,16 +36,13 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     }catch(err){
         res.status(500).json(err)
     }
-  router.get('/new', (req, res) => {
-    res.render('new-post');
-  })
 })
 
-router.get('/new-post', withAuth, (req, res) => {
-    res.render('create-post', {
-      posts,
-      logged_in: true,
-    })
-})
+// router.get('/new-post', withAuth, (req, res) => {
+//     res.render('create-post', {
+//       posts,
+//       logged_in: true,
+//     })
+// })
 
-module.exports = router;
+// module.exports = router;
