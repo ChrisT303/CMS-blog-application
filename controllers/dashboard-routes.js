@@ -45,4 +45,4 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 //     })
 // })
 
-// module.exports = router;
+module.exports = router;

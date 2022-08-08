@@ -1,8 +1,17 @@
 nav {
-    height: 100px;
+    height: 150px;
     background-color: gray;
 }
 
 .card-body {
     background-color: rgb(139, 139, 177);
+}
+
+.card {
+    margin-top: 10rem;
+    margin-left: 35rem;
+}
+
+#signup-color {
+    background-color:  rgb(153, 214, 153);
 }

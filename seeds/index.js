@@ -1,4 +1,4 @@
-const sequelize = require("../config/config");
+const sequelize = require("../config/connection");
 const seedUser = require("./user-seeds");
 const seedPost = require("./post-seeds");
 

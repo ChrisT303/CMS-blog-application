@@ -1,6 +1,6 @@
 const { Post } = require("../models");
 
-const postdata = [
+const postData = [
   {
     post_title: "Whats the difference between a chicken and a duck-way?",
     post_content: "About 3 pounds",
@@ -18,6 +18,6 @@ const postdata = [
   },
 ];
 
-const seedPost = () => Post.bulkCreate(postdata);
+const seedPost = () => Post.bulkCreate(postData, {individualHooks: true});
 
 module.exports = seedPost;
