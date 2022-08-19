@@ -21,8 +21,13 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+            </li>
+             
+            <li class="nav-item">
               <a class="nav-link" href="/login">Login</a>
             </li>
+              
             <li class="nav-item">
               <a class="nav-link" href="/signup">Signup</a>
             </li>
@@ -36,5 +41,8 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    {{#if logged_in}}
+    <script src="/Javascript/logout.js"></script>
+    {{/if}}
   </body>
 </html>
