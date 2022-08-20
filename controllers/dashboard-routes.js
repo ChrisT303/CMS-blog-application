@@ -7,7 +7,7 @@ router.get("/", withAuth, async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const postData = await Post.findAll({
-      where: { "user_id": req.session.user_id },
+      where: { user_id: req.session.user_id },
       include: [User],
     });
 
@@ -18,7 +18,6 @@ router.get("/", withAuth, async (req, res) => {
     res.render("all-posts", {
       layout: 'dashboard',
       posts,
-      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.redirect("login");
@@ -33,7 +32,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         res.render("edit", {
           layout: dashboard,
           editData,
-          logged_in: req.session.logged_in,
         });
     }catch(err){
         res.status(500).json(err)
