@@ -38,11 +38,11 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     }
 })
 
-// router.get('/new-post', withAuth, (req, res) => {
-//     res.render('create-post', {
-//       posts,
-//       logged_in: true,
-//     })
-// })
+router.get('/create', withAuth, (req, res) => {
+    res.render('create-post', {
+      layout: dashboard,
+      logged_in: true,
+    })
+})
 
 module.exports = router;
