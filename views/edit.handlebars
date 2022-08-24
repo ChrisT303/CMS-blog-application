@@ -1,1 +1,31 @@
-<h1>This will be edit page</h1>
+<div class="card">
+  <h2 class="card-header">Edit Post</h2>
+  <form class="card-body" id="edit-post">
+    <div>
+      <label class="form-label">Title:</label>
+      <input
+        class="form-input"
+        type="text"
+        name="post-title"
+        value="{{post.post_title}}"
+      />
+    </div>
+
+    <div>
+      <label class="form-label">Content:</label>
+      <textarea
+        class="form-textarea form-input"
+        name="post-text"
+        data-number="8"
+      >{{post.post_content}}</textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">EDIT</button>
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+  </form>
+  <div class="card-body">
+    <button class="btn btn-primary" type="click" id="delete">DELETE</button>
+  </div>
+</div>
+<script src="/Javascript/edit-post.js"></script>
+<script src="/Javascript/delete-post.js"></script>

@@ -1,26 +1,25 @@
-<div class="card mx-auto mt-5" style="width: 70%;">
-  <div class="card-body">
-    <h5 class="card-title">Create New Post</h5>
-    <form>
-      <div class="mb-3">
-        <label for="text" class="form-label">Post Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="new-post-user"
-          aria-describedby="loginInfo"
-        />
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Content:</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-
-          </div>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Post</button>
-    </form>
-  </div>
+<div class="card">
+  <div class="card-header  flex-row justify-space-between">
+    <h2>
+      <a href="/post/{{post.id}}">
+        <div class="col-8">{{post.post_title}}</div>
+      </a>
+    </h2>
+    <div class="col-3">posted by {{post.user.username}} on {{format_date post.date}}
+    </div>
+  </div>  
+  <p class="card-body">
+   {{post.post_content}}
+  </p>
 </div>
+<input type="text" id="post-id" value="{{post.id}}"/>
+<div class="card">
+  <div class="card-header"></div>
+  <form class="card-body" id="new-comment">
+    <p class="form-label">Comment:</p>
+    <textarea class="form-input" id="comment-text"></textarea>
+    <button type="submit" class="btn btn-primary">Submit:</button>
+  </form>
+{{> comment post.comment}}
+</div>
+<script src="/Javascript/comment.js"></script>
