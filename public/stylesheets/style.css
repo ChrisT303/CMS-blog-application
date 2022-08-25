@@ -11,3 +11,7 @@ nav {
 #signup-color {
     background-color:  rgb(153, 214, 153);
 }
+
+.create {
+    width: 100%;
+}

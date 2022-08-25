@@ -1,27 +1,20 @@
-<div class="card mx-auto mt-5" style="width: 70%;">
-  <div class="card-body">
-    <h5 class="card-title">Create New Post</h5>
-    <form id = "user-new-post">
-      <div class="mb-3">
-        <label for="text" class="form-label">Post Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title-id"
-          aria-describedby="loginInfo"
-        />
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Content:</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-
-          </div>
-          <textarea class="form-control" aria-label="With textarea" id="post-content"></textarea>
-        </div>
-      </div>
-      <a type="submit" class="btn btn-primary">Post</a>
-    </form>
-  </div>
+<div class="card mx-auto mt-5" style="width: 70%">
+  <h2 class="card-header">Create New Post</h2>
+  <form class="card-body" id="new-post-form">
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <div>
+      <label class="form-label">Title:</label>
+      <input class="form-input create" type="text" name="post-title" />
+    </div>
+    <div>
+      <label class="form-label">Content:</label>
+      <textarea
+        class="form-textarea form-input create"
+        name="post-body"
+        data-number="8"
+      ></textarea>
+    </div>
+    <button class="btn btn-primary">CREATE</button>
+  </form>
 </div>
 <script src="/Javascript/create-post.js"></script>
