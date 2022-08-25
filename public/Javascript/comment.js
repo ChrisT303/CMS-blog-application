@@ -5,7 +5,7 @@ const handleComment = async (event) => {
     const comment = document.querySelector("#comment-text").value;
     
   if (comment) {
-    const response = await fetch("/api/comment", {
+    const response = await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({
         post,

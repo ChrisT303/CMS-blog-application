@@ -1,7 +1,7 @@
 const handleDeletePost = async () => {
   const post = document.querySelector('input[name="post-id"]').value;
 
-  await fetch(`/api/post/${post}`, {
+  await fetch(`/api/posts/${post}`, {
     method: "DELETE",
   });
 

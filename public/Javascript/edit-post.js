@@ -5,7 +5,7 @@ const handleEditPost = async (event) => {
   const title = document.querySelector('input[name="post-title"]').value;
   const content = document.querySelector('textarea[name="post-text"]').value;
 
-  const response = await fetch(`/api/post/${post}`, {
+  const response = await fetch(`/api/posts/${post}`, {
     method: "PUT",
     body: JSON.stringify({
       title,

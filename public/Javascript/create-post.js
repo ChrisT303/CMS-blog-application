@@ -4,7 +4,7 @@ const handleNewPost = async function (event) {
   const post = document.querySelector('input[name="post-title"]').value;
   const content = document.querySelector('textarea[name="post-body"]').value;
 
-  await fetch(`/api/post`, {
+  await fetch(`/api/posts`, {
     method: "POST",
     body: JSON.stringify({
       post,

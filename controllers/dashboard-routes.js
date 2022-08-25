@@ -40,8 +40,8 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
 router.get('/create', withAuth, (req, res) => {
     res.render('create-post', {
-      layout: dashboard,
-      logged_in: true,
+      layout: "dashboard",
+      // logged_in: true,
     })
 })
 
