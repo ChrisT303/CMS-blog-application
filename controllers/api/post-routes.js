@@ -10,10 +10,8 @@ router.post("/", withAuth, async (req, res) => {
       ...body,
       user_id: req.session.user_id,
     });
-    console.log("Here is the new post: ", newPost);
     res.json(newPost);
   } catch (err) {
-    console.log("IT FAILED!", err);
     res.status(500).json(err);
   }
 });

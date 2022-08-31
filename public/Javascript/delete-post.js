@@ -1,11 +1,11 @@
 const handleDeletePost = async () => {
-  const post = document.querySelector('input[name="post-id"]').value;
+  const post_id = document.querySelector('input[name="post-id"]').value;
 
-  await fetch(`/api/posts/${post}`, {
+  await fetch(`/api/posts/${post_id}`, {
     method: "DELETE",
   });
 
   document.location.replace("/dashboard");
 };
 
-document.querySelector("#delete").addEventListener("click", deleteClickHandler);
+document.querySelector("#delete").addEventListener("click", handleDeletePost);
